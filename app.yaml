@@ -1,0 +1,20 @@
+application: star-tunnel
+version: alpha-002
+runtime: python27
+api_version: 1
+
+handlers:
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt 
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /js
+  static_dir: js
+
+- url: .*
+  script: main.py
+
+threadsafe: no
